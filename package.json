@@ -114,7 +114,6 @@
     "json5": "^2.2.3",
     "keyv": "^4.5.4",
     "levn": "^0.4.1",
-    "lightningcss": "^1.31.1",
     "lightningcss-win32-x64-msvc": "^1.31.1",
     "lines-and-columns": "^1.2.4",
     "locate-path": "^6.0.0",
@@ -211,6 +210,10 @@
     "zod": "^4.3.6",
     "zod-validation-error": "^4.0.2"
   },
+  "overrides": {
+  "lightningcss-win32-x64-msvc": "0.0.0",
+  "lightningcss": "1.0.0"
+},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
