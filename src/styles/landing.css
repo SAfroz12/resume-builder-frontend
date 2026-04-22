@@ -1,0 +1,126 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/* 🌈 Background Gradient */
+.landing-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔵 Blurred Glow Circles */
+.landing-container::before,
+.landing-container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: 1;
+  animation: float 8s infinite ease-in-out;
+}
+
+.landing-container::before {
+  background: rgba(255, 255, 255, 0.4);
+  top: -50px;
+  left: -70px;
+}
+
+.landing-container::after {
+  background: rgba(255, 255, 255, 0.25);
+  bottom: -60px;
+  right: -40px;
+}
+
+/* ✨ Main Card */
+.landing-content {
+  z-index: 5;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 650px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* 🎯 Heading */
+.landing-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+  line-height: 1.2;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* ℹ️ Subtext */
+.landing-text {
+  font-size: 18px;
+  color: #f1f1f1;
+  margin-bottom: 28px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* 🚀 CTA Button */
+.start-btn {
+  padding: 14px 32px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 2s ease forwards;
+}
+
+.start-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: #f3f4f6;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* 🌬 Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-35px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 🎞 Fade Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .landing-content {
+    padding: 30px;
+  }
+  .landing-heading {
+    font-size: 34px;
+  }
+  .landing-text {
+    font-size: 16px;
+  }
+}

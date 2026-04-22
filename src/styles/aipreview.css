@@ -1,0 +1,53 @@
+/* Wrapper that fills the AI preview area */
+.ai-start-wrapper {
+  width: 100%;
+  height: 400px;                  /* Important: fill available height */
+  position: relative;           /* horizontal center */
+}
+
+/* Inner container with centered text */
+.ai-start-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Titles */
+.ai-start-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ai-start-sub {
+  font-size: 16px;
+  opacity: 0.8;
+  max-width: 480px;
+  margin: 0 auto 20px auto;
+}
+
+/* Button */
+.ai-btn {
+  background: #4f46e5;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ai-btn:hover {
+  background: #4338ca;
+  transform: translateY(-3px);
+}

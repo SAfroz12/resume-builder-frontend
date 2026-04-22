@@ -1,0 +1,134 @@
+GLOBAL BUILDER THEME
+.builder-theme {
+  background: #f8fafc;
+  min-height: 100vh;
+  padding: 25px;
+  font-family: "Inter", sans-serif;
+}
+
+/* FORM SECTIONS */
+.builder-theme .section-box {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* LABELS */
+.builder-theme label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* INPUTS */
+.builder-theme input,
+.builder-theme textarea,
+.builder-theme select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  margin-top: 6px;
+  background: #fdfdfd;
+  transition: 0.2s ease;
+}
+
+.builder-theme input:focus,
+.builder-theme textarea:focus,
+.builder-theme select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.25);
+  outline: none;
+}
+
+/* TITLES */
+.builder-theme h2,
+.builder-theme h3 {
+  color:#1e293b;
+  margin-bottom: 12px;
+}
+
+/* BUTTONS */
+.builder-theme button {
+  background: #4f46e5;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+ 
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.builder-theme button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* ADD BUTTONS / SMALL BUTTONS */
+.builder-theme .add-btn {
+  background: #10b981;
+}
+.builder-theme .add-btn:hover {
+  background: #059669;
+}
+
+/* Remove ugly outlines from tags, selects etc */
+.builder-theme .react-select__control {
+  border-radius: 8px !important;
+}
+/* FIX INPUT OVERFLOW + SPACING */
+.builder-theme .section-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* GRID LAYOUT FOR FORMS */
+.builder-theme .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+
+/* Make inputs nice with spacing */
+.builder-theme input,
+.builder-theme textarea,
+.builder-theme select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #fefefe;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.builder-theme input:focus,
+.builder-theme textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* Fix input overflow inside card */
+.builder-theme .edu-item,
+.builder-theme .project-item,
+.builder-theme .section-box {
+  overflow: hidden;
+}
