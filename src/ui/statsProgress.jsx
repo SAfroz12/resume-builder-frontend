@@ -1,40 +1,17 @@
 import React from "react";
-import ProgressBarModule from "@ramonak/react-progress-bar";
+import ProgressBar from "@ramonak/react-progress-bar";
 import "../styles/statsprogress.css";
 
 const StatsProgress = ({ score = 60 }) => {
 
-  const ProgressBar = ProgressBarModule.default;
-
-    // let color, status;
-
-    // if(score < 40){
-    //     color = "red";
-    //     status="Bad"
-    // }
-    // else if(score > 40 && score<60){
-    //     color="#ffff00";
-    //     status="Average";
-
-    // }
-    // else if(score >60 && score<=80){
-    //     color="green";
-    //     status="Good";
-
-    // }
-    // else{
-    //     color="#11526C";
-    //     status="Excellent"
-    // }
-
-
-     const scoreConfig = [
+  const scoreConfig = [
     { limit: 40, color: "red", status: "Bad" },
     { limit: 60, color: "#ffff00", status: "Average" },
     { limit: 80, color: "green", status: "Good" },
     { limit: 100, color: "#11526C", status: "Excellent" }
   ];
-   const config = scoreConfig.find(item => score <= item.limit);
+
+  const config = scoreConfig.find(item => score <= item.limit);
 
   return (
     <div className="stats-container">
@@ -62,7 +39,6 @@ const StatsProgress = ({ score = 60 }) => {
         />
       </div>
 
-     
     </div>
   );
 };

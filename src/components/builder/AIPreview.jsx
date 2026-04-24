@@ -25,10 +25,11 @@ function AIPreview({
     useContext(AiPreviewContext);
 
   const generateAIResume = async () => {
+     console.log("🚀 BUTTON CLICKED");
     try {
       setLoadingAI(true);
-
-      const response = await fetch("https://resume-builder-backend-2-e9r1.onrender.com/analyze", {
+console.log("📤 Sending request..."); 
+      const response = await fetch("https://resume-builder-backend01-d6nr.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -49,8 +50,11 @@ function AIPreview({
           certifications: certifications?.map(c => c.name || c.label || c.title || c) || []
         })
       });
+      console.log("📥 RESPONSE STATUS:", response.status);
 
       const raw = await response.json();
+
+    console.log("📦 BACKEND DATA:", raw); 
       setAiPreviewData(raw);
       onResult(raw);
     } catch (err) {
