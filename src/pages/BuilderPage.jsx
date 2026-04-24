@@ -1,4 +1,4 @@
-import StatsProgress from "../ui/StatsProgress";
+import StatsProgress from "../ui/StatsProgress.jsx";
 import { useSearchParams } from "react-router-dom";
 import PersonalInfo from "../components/builder/personalInfo";
 import Education from "../components/builder/Education";
